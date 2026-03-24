@@ -1,0 +1,507 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Everyday Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+/* Infographic Container */
+.mother-day-infographic-container {
+    background-color: #E2F0F9;
+    border: 2px dashed #4A90E2;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+/* Main Heading */
+.mother-day-main-heading {
+    color: #041E42;
+    text-align: center;
+    font-family: "Everyday Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 56px;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+
+/* Content Area - Two Column Layout */
+.mother-day-content-area {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+
+.mother-day-left-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.mother-day-stats-row {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.mother-day-stats-row .mother-day-stat-block {
+    flex: 1;
+}
+
+.mother-day-stats-row-bottom {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.mother-day-stats-row-bottom .mother-day-stat-block {
+    flex: 1;
+    max-width: calc(50% - 20px);
+}
+
+
+.mother-day-stat-block {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.mother-day-big-number {
+    font-size: 80px;
+    font-weight: 300;
+    background: linear-gradient(110deg, #8B33ED 22.79%, #00BEFF 43.56%, #34CECF 79.28%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 0 10px 0;
+    line-height: 1;
+}
+
+
+.mother-day-description {
+    color: #041E42;
+    font-family: "Everyday Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23.8px;
+    margin: 0;
+}
+
+
+.mother-day-right-column {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+
+.mother-day-image-wrapper {
+    position: relative;
+    border-radius: 12px;
+    padding: 3px;
+    background: linear-gradient(110deg, #8B33ED 22.79%, #00BEFF 43.56%, #34CECF 79.28%);
+    display: inline-block;
+}
+
+.mother-day-image-wrapper img {
+    display: block;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 992px) {
+    .mother-day-infographic-container {
+        padding: 30px;
+    }
+    
+    .mother-day-content-area {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .mother-day-right-column {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .mother-day-image-wrapper img {
+        max-width: 100%;
+    }
+    
+    .mother-day-stats-row {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .mother-day-stats-row-bottom .mother-day-stat-block {
+        max-width: 100%;
+    }
+    
+    .mother-day-big-number {
+        font-size: 64px;
+    }
+}
+
+@media (max-width: 576px) {
+    .mother-day-infographic-container {
+        padding: 20px;
+    }
+    
+    .mother-day-main-heading {
+        font-size: 28px;
+        line-height: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .mother-day-content-area {
+        gap: 25px;
+    }
+    
+    .mother-day-big-number {
+        font-size: 48px;
+    }
+    
+    .mother-day-description {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    
+    .mother-day-stats-row,
+    .mother-day-stats-row-bottom {
+        gap: 25px;
+    }
+    
+    .mother-day-left-column {
+        gap: 25px;
+    }
+}
+
+/* ========================================
+   Activity Across Channels Section Styles
+   ======================================== */
+
+/* Activity Section Container */
+.mother-day-activity-section {
+    max-width: 1200px;
+    margin: 60px auto 0;
+    padding: 0 20px;
+}
+
+/* Section Heading */
+.mother-day-activity-heading {
+    color: #041E42;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: "Everyday Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 56px;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+/* Cards Container - 3 Column Layout */
+.mother-day-cards-container {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* Individual Card */
+.mother-day-activity-card {
+    flex: 1;
+    border-radius: 31px;
+    border: 2px solid #1266F1;
+    padding: 30px;
+    background-color: transparent;
+}
+
+/* Card Title */
+.mother-day-card-title {
+    color: #041E42;
+    font-family: "Everyday Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+    margin: 0 0 20px 0;
+}
+
+/* Card List */
+.mother-day-card-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.mother-day-card-list li {
+    color: #041E42;
+    font-family: "Everyday Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.mother-day-card-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* Add bullet points */
+.mother-day-card-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #1266F1;
+    font-size: 20px;
+}
+
+/* Footer Note */
+.mother-day-footer-note {
+    color: #4F4F4F;
+    text-align: right;
+    font-family: "Everyday Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px;
+    margin-top: 20px;
+    display: block;
+}
+
+/* Responsive Design - Tablet */
+@media (max-width: 992px) {
+    .mother-day-activity-section {
+        margin: 40px auto 0;
+        padding: 0 15px;
+    }
+    
+    .mother-day-activity-heading {
+        font-size: 32px;
+        line-height: 45px;
+        white-space: normal;
+    }
+    
+    .mother-day-cards-container {
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    .mother-day-activity-card {
+        padding: 25px;
+    }
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 576px) {
+    .mother-day-activity-section {
+        margin: 30px auto 0;
+        padding: 0 10px;
+    }
+    
+    .mother-day-activity-heading {
+        font-size: 24px;
+        line-height: 34px;
+    }
+    
+    .mother-day-activity-card {
+        padding: 20px;
+    }
+    
+    .mother-day-card-title {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    
+    .mother-day-card-list li {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    
+    .mother-day-footer-note {
+        font-size: 9px;
+        line-height: 11px;
+    }
+}
+
+/* ========================================
+   Connect with Mother's Day Shoppers Section
+   ======================================== */
+
+/* Connect Section Container */
+.mother-day-connect-section {
+    background-color: #E2F0F9;
+    border: 2px dashed #4A90E2;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 60px auto 0;
+    border-radius: 8px;
+}
+
+/* Section Main Heading */
+.mother-day-connect-heading {
+    color: #0B1953;
+    font-family: "Everyday Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: 0.56px;
+    margin-bottom: 15px;
+}
+
+/* Section Sub-description */
+.mother-day-connect-description {
+    color: #041E42;
+    font-family: "Everyday Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23.8px;
+    margin-bottom: 50px;
+    max-width: 900px;
+}
+
+/* Columns Container - 3 Column Layout */
+.mother-day-connect-columns {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* Individual Column */
+.mother-day-connect-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* SVG Container */
+.mother-day-connect-icon {
+    margin-bottom: 0;
+}
+
+/* Horizontal Line below SVG */
+.mother-day-connect-divider {
+    border: none;
+    border-top: 2px solid #041E42;
+    width: 50%;
+    margin: 20px auto;
+}
+
+/* Column Title */
+.mother-day-connect-column-title {
+    color: #0B1953;
+    text-align: center;
+    font-family: "Everyday Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.56px;
+    margin: 20px 0 10px 0;
+}
+
+/* Column Paragraph */
+.mother-day-connect-text {
+    color: #041E42;
+    text-align: center;
+    font-family: "Everyday Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23.8px;
+}
+
+/* Link inside paragraphs */
+.mother-day-connect-text a {
+    color: #1266F1;
+    font-family: "Everyday Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23.8px;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+}
+
+/* Responsive Design - Tablet */
+@media (max-width: 992px) {
+    .mother-day-connect-section {
+        padding: 30px;
+        margin: 40px auto 0;
+    }
+    
+    .mother-day-connect-heading {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    
+    .mother-day-connect-columns {
+        flex-direction: column;
+        gap: 35px;
+    }
+    
+    .mother-day-connect-description {
+        margin-bottom: 35px;
+    }
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 576px) {
+    .mother-day-connect-section {
+        padding: 20px;
+        margin: 30px auto 0;
+    }
+    
+    .mother-day-connect-heading {
+        font-size: 20px;
+        line-height: 26px;
+    }
+    
+    .mother-day-connect-description {
+        font-size: 13px;
+        line-height: 22px;
+        margin-bottom: 30px;
+    }
+    
+    .mother-day-connect-columns {
+        gap: 30px;
+    }
+    
+    .mother-day-connect-column-title {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    
+    .mother-day-connect-text {
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
