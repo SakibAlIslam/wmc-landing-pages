@@ -129,7 +129,7 @@
                         purchase intent— driving trial and influencing buying decisions.
                     </p>
                 </article>
-
+                <div class="eid-ramadan-wm-info-pillar-divider"></div>
                 <article class="eid-ramadan-wm-info-pillar">
                     <h2 class="eid-ramadan-wm-pillar-title">Engage with Online Shoppers</h2>
                     <p class="eid-ramadan-wm-pillar-text">
@@ -139,7 +139,7 @@
                         captivating shoppers at the beginning of their shopping journey.
                     </p>
                 </article>
-
+                <div class="eid-ramadan-wm-info-pillar-divider"></div>
                 <article class="eid-ramadan-wm-info-pillar">
                     <h2 class="eid-ramadan-wm-pillar-title">Time Sensitive Online Activation</h2>
                     <p class="eid-ramadan-wm-pillar-text">
@@ -663,8 +663,6 @@
                 flex: 1;
                 min-width: 250px;
                 padding: 0 40px;
-                border-right: 1px solid #041e42;
-                /* Vertical separator */
                 box-sizing: border-box;
             }
 
@@ -673,17 +671,25 @@
             }
 
             #walmart-eid-strategy-2026 .eid-ramadan-wm-info-pillar:last-child {
-                border-right: none;
                 padding-right: 0;
+            }
+
+            #walmart-eid-strategy-2026 .eid-ramadan-wm-info-pillar-divider {
+                width: 1px;
+                height: 188px;
+                background-color: #041E42;
+                margin: auto 0 0;
             }
 
             /* Pillar Content */
             #walmart-eid-strategy-2026 .eid-ramadan-wm-pillar-title {
+                max-width: 200px;
                 font-size: 20px;
                 font-weight: 700;
                 margin-bottom: 20px;
                 line-height: 1.1;
                 color: #0B1953;
+                margin-top: 0;
             }
 
             #walmart-eid-strategy-2026 .eid-ramadan-wm-pillar-text {
@@ -705,11 +711,11 @@
 
             /* Mobile Responsiveness */
             @media (max-width: 992px) {
-                #walmart-eid-strategy-2026.eid-ramadan-wm-campaign-wrapper  {
+                #walmart-eid-strategy-2026.eid-ramadan-wm-campaign-wrapper {
                     padding: 32px 5% 24px;
                 }
 
-                #walmart-eid-strategy-2026 .eid-ramadan-wm-content-header  {
+                #walmart-eid-strategy-2026 .eid-ramadan-wm-content-header {
                     margin-bottom: 0;
                 }
 
@@ -722,6 +728,14 @@
                 #walmart-eid-strategy-2026 .eid-ramadan-wm-three-column-layout {
                     margin-top: 0;
                     flex-direction: column;
+                }
+
+                #walmart-eid-strategy-2026 .eid-ramadan-wm-pillar-title {
+                    max-width: max-content;
+                }
+
+                #walmart-eid-strategy-2026 .eid-ramadan-wm-info-pillar-divider {
+                    display: none;
                 }
 
                 #walmart-eid-strategy-2026 .eid-ramadan-wm-pillar-text {
