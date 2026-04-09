@@ -37,7 +37,7 @@
                 <div class="taco-bell-formation__cards">
 
                     <div class="taco-bell-formation__card">
-                        <div class="taco-bell-formation__badge">Strategy</div>
+                        <div class="taco-bell-formation__badge"><span>Strategy</span></div>
                         <p class="taco-bell-formation__card-name">Locations were carefully selected to target shoppers
                             at stores that see high foot traffic and have a strong affinity for the brand. There were
                             also no restaurant locations nearby, making the at-home kits the most convenient way for
@@ -45,7 +45,7 @@
                     </div>
 
                     <div class="taco-bell-formation__card">
-                        <div class="taco-bell-formation__badge">Experience</div>
+                        <div class="taco-bell-formation__badge"><span>Experience</span></div>
                         <p class="taco-bell-formation__card-desc">
                             By letting customers build their own tacos, the product was brought to life right before
                             their eyes, allowing them to experience how easy and delicious these at-home kits truly are.
@@ -53,7 +53,7 @@
                     </div>
 
                     <div class="taco-bell-formation__card">
-                        <div class="taco-bell-formation__badge">Impact</div>
+                        <div class="taco-bell-formation__badge"><span>Impact</span></div>
                         <p class="taco-bell-formation__card-desc taco-bell-formation__card-desc--last">
                             The new products and opportunity to participate in this experience were promoted through
                             Walmart digital flyers, website, app, and offsite paid media, building momentum leading up
@@ -197,7 +197,6 @@ FORMATION SECTION
                 font-family: "Everyday Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
                 font-size: 32px;
                 font-weight: 300;
-                color: #1266f1;
                 line-height: 1;
                 margin-bottom: 13px;
                 padding: 8px 24px 14px;
@@ -210,6 +209,14 @@ FORMATION SECTION
                 background-origin: border-box;
                 background-clip: padding-box, border-box;
                 box-sizing: border-box;
+            }
+
+            .taco-bell-formation__badge span {
+                background: linear-gradient(105deg, #8B33ED 32.7%, #00BEFF 55.96%, #34CECF 75.38%);
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                color: transparent;
             }
 
             .taco-bell-formation__card-name,
