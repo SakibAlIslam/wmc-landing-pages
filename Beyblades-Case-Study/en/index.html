@@ -25,7 +25,6 @@
 
         <!-- ========== EXECUTING A WINNING FORMATION ========== -->
         <section class="beyblades">
-            <h2 class="beyblades__title">Executing a winning formation</h2>
             <div class="beyblades__layout">
 
                 <!-- Left: Who / What / How cards -->
@@ -56,7 +55,7 @@
         </section>
 
         <!--=========== In store - Digital section ===========-->
-        <div class="beyblades-section">
+        <div class="beyblades-store-section">
 
             <!-- Icon row -->
             <div class="beyblades-icon-row">
@@ -84,6 +83,13 @@
                     </svg>
 
                     <p class="beyblades-label">In-store</p>
+
+                    <div class="beyblades-card beyblades-card--in-store-mobile">
+                        <p>In-store events focused on community engagement and duels, bringing the spirit of the toys to
+                            life. Over 500 total engagements with more than 250 giveaways and over 200 players — both
+                            tournament and free play — made these retailtainment events a rip-roaring success!</p>
+                    </div>
+
                 </div>
 
                 <!-- Connector -->
@@ -119,12 +125,12 @@
 
             <!-- Cards -->
             <div class="beyblades-cards">
-                <div class="beyblades-card">
+                <div class="beyblades-card beyblades-card--in-store-desktop">
                     <p>In-store events focused on community engagement and duels, bringing the spirit of the toys to
                         life. Over 500 total engagements with more than 250 giveaways and over 200 players — both
                         tournament and free play — made these retailtainment events a rip-roaring success!</p>
                 </div>
-                <div class="beyblades-card">
+                <div class="beyblades-card beyblades-card--digital">
                     <p>Digital tactics included a branded homepage, unique to BeybladeX and built to showcase the brand
                         and product. Paid offsite social, onsite banners, search hero banners, and tile takeovers drove
                         discovery and consideration.</p>
@@ -267,22 +273,7 @@ ARTICLE BODY
                 margin-bottom: 48px;
             }
 
-            /* ============================================================
-FORMATION SECTION
-============================================================ */
-
-            .beyblades__title {
-                font-family: "Everyday Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-                font-size: 37px;
-                font-weight: 700;
-                color: #041E42;
-                line-height: 56px;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                margin-bottom: 44px;
-            }
-
+            /* ======= FORMATION SECTION ======= */
             .beyblades__layout {
                 display: flex;
                 align-items: flex-start;
@@ -320,7 +311,7 @@ FORMATION SECTION
                 background-color: #ffffff;
                 border: 2px solid transparent;
                 background-image: linear-gradient(#ffffff, #ffffff),
-                    linear-gradient(135deg, #00BEFF 0%, #1266F1 25%);
+                    linear-gradient(135deg, #8B33ED 0%, #00BEFF 50%, #34CECF 100%);
                 background-origin: border-box;
                 background-clip: padding-box, border-box;
                 box-sizing: border-box;
@@ -348,11 +339,22 @@ FORMATION SECTION
                 max-width: 340px;
             }
 
+            @media (max-width: 1023px) {
+                .beyblades__layout {
+                    flex-direction: column;
+                    gap: 32px;
+                }
+
+                .beyblades__photo {
+                    max-width: 100%;
+                }
+            }
+
 
     /* ============ In store and Digital section ============ */
-            .beyblades-section {
+            .beyblades-store-section {
+                margin: 70px auto 90px;
                 width: 100%;
-                max-width: 960px;
             }
 
             /* ── Top row: icons + connector ── */
@@ -362,14 +364,16 @@ FORMATION SECTION
                 justify-content: center;
                 gap: 0;
                 margin: 0 auto 28px;
-                max-width: 610px;
+                max-width: 650px;
             }
 
             .beyblades-icon-wrap {
                 position: relative;
-                width: var(--icon-size);
-                height: var(--icon-size);
                 flex-shrink: 0;
+            }
+
+            .beyblades-card--in-store-mobile {
+                display: none;
             }
 
             .beyblades-icon-wrap svg.beyblades-ring {
@@ -404,10 +408,10 @@ FORMATION SECTION
             .beyblades-connector {
                 flex: 1;
                 height: 2px;
-                background: linear-gradient(90deg, #a78bfa, #38bdf8, #34d399);
-                margin: 0 12px;
+                background: linear-gradient(90deg, #8B33ED 0%, #00BEFF 50%, #34CECF 100%);
+                margin: 0 35px;
                 border-radius: 2px;
-                transform: translateY(-10px);
+                transform: translateY(-30px);
             }
 
             /* ── Label row ── */
@@ -418,11 +422,12 @@ FORMATION SECTION
             }
 
             .beyblades-label {
-                margin: 0;
-                font-family: 'Sora', sans-serif;
-                font-size: clamp(1.25rem, 3vw, 1.6rem);
-                font-weight: 600;
-                background: linear-gradient(130deg, #7b5ea7, #38bdf8);
+                margin: 10px auto 0;
+                font-family: "Everyday Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+                font-size: 30px;
+                line-height: 56px;
+                font-weight: 400;
+                background: #1266F1;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 background-clip: text;
@@ -442,10 +447,13 @@ FORMATION SECTION
             }
 
             .beyblades-card p {
-                font-size: clamp(0.875rem, 1.5vw, 1rem);
-                line-height: 1.75;
-                color: var(--text-body);
+                font-family: "Everyday Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+                margin: 0;
+                font-size: 18px;
+                line-height: 27px;
+                color: #041E42;
                 font-weight: 400;
+                letter-spacing: 0.5px;
             }
 
             /* ── TABLET (≤ 1023px) ── */
@@ -456,10 +464,29 @@ FORMATION SECTION
                 }
 
                 .beyblades-card {
-                    padding: 22px 20px;
+                    padding: 0 0 50px;
                 }
 
                 .beyblades-connector {
+                    display: none;
+                }
+
+                .beyblades-icon-wrap {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                }
+
+                .beyblades-card--digital {
+                    padding-bottom: 0;
+                }
+
+                .beyblades-card--in-store-mobile {
+                    display: block;
+                }
+
+                .beyblades-card--in-store-desktop {
                     display: none;
                 }
             }
@@ -481,7 +508,7 @@ FORMATION SECTION
                 }
             }
 
-    /* ============= Stats Section =============== */
+            /* ============= Stats Section =============== */
             /* ── Card ── */
             .beyblades-win-card {
                 box-sizing: border-box;
@@ -629,33 +656,23 @@ FORMATION SECTION
 
             /* ========== Beyblades-Quote-Section =============== */
             .beyblades-quote-section {
+                margin: 62px 0;
                 font-family: "Everyday Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
                 background: #ffffff;
                 display: flex;
                 align-items: center;
-                gap: 48px;
+                gap: 30px;
             }
 
             /* ── Left: image block ── */
             .beyblades-quote-image-wrap {
-                flex: 0 0 420px;
-                border-radius: 20px;
-                border: 2px solid transparent;
-                background-image:
-                    linear-gradient(#fff, #fff),
-                    linear-gradient(160deg, #a78bfa, #38bdf8, #34d399);
-                background-origin: border-box;
-                background-clip: padding-box, border-box;
-                overflow: hidden;
-                position: relative;
+                flex: 0 0 350px;
             }
 
             .beyblades-quote-image-wrap img {
                 width: 100%;
                 height: 100%;
-                display: block;
                 object-fit: cover;
-                border-radius: 18px;
             }
 
             /* ── Right: content block ── */
@@ -668,37 +685,42 @@ FORMATION SECTION
 
             /* ── Quote text ── */
             .beyblades-quote-text {
-                font-size: clamp(0.95rem, 1.6vw, 1.1rem);
-                line-height: 1.75;
-                color: #1a1a2e;
+                font-family: "Everyday Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+                margin: 0;
+                font-size: 18px;
+                line-height: 27px;
+                color: #041E42;
                 font-weight: 400;
             }
 
             /* ── Author block ── */
             .beyblades-quote-author {
+                font-family: "Everyday Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
                 display: flex;
                 flex-direction: column;
                 gap: 2px;
             }
 
             .beyblades-quote-author-name {
-                font-size: clamp(0.95rem, 1.4vw, 1.05rem);
+                font-family: "Everyday Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+                font-size: 18px;
                 font-weight: 700;
-                color: #1a1a2e;
-                line-height: 1.4;
+                color: #041E42;
+                line-height: 27px;
             }
 
             .beyblades-quote-author-title {
-                font-size: clamp(0.95rem, 1.4vw, 1.05rem);
+                font-family: "Everyday Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+                font-size: 18px;
                 font-weight: 700;
-                color: #1a1a2e;
-                line-height: 1.4;
+                color: #041E42;
+                line-height: 27px;
             }
 
             /* ── Footer: logo + copyright ── */
             .beyblades-quote-footer {
                 display: flex;
-                align-items: center;
+                align-items: flex-end;
                 gap: 12px;
             }
 
@@ -709,8 +731,9 @@ FORMATION SECTION
             }
 
             .beyblades-quote-copyright {
-                font-size: 0.82rem;
-                color: #6b7280;
+                font-family: "Everyday Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+                font-size: 10px;
+                color: #041E42;
                 font-weight: 400;
             }
 
