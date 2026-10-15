@@ -1,0 +1,42 @@
+EN: 
+beauty: /content/dam/walmart-connect-canada/en/images/pages/insights/Valentine’s%20Day%20Insights%202026/Beauty.png
+
+Chocolate and candy: /content/dam/walmart-connect-canada/en/images/pages/insights/Valentine’s%20Day%20Insights%202026/Chocolate%20and%20Candy.png
+
+Decor: /content/dam/walmart-connect-canada/en/images/pages/insights/Valentine’s%20Day%20Insights%202026/Decor.png
+
+Jewlarry: /content/dam/walmart-connect-canada/en/images/pages/insights/Valentine’s%20Day%20Insights%202026/Jewellery.png
+
+
+Document PDF:
+beauty: /content/dam/walmart-connect-canada/en/documents/pages/resources/Valentine’s%20Day%20Insights%202026/WMC_ValentinesDay_Beauty_FY26_EN.pdf
+
+Chocolate and candy: /content/dam/walmart-connect-canada/en/documents/pages/resources/Valentine’s%20Day%20Insights%202026/WMC_ValentinesDay_ChocolateAndCandyFY26_EN.pdf
+
+Decor: /content/dam/walmart-connect-canada/en/documents/pages/resources/Valentine’s%20Day%20Insights%202026/WMC_ValentinesDay_Decor_FY26_EN.pdf
+
+Jewlarry: /content/dam/walmart-connect-canada/en/documents/pages/resources/Valentine’s%20Day%20Insights%202026/WMC_ValentinesDay_Jewellery_FY26_EN.pdf
+
+
+<-------------------- FR FR FR FR FR FR ---------------------> 
+
+
+
+FR: Images: 
+beauty: /content/dam/walmart-connect-canada/fr/images/pages/resources/Valentine’s%20Day%20Insights%202026/Beauty.png
+
+Chocolate and candy: /content/dam/walmart-connect-canada/fr/images/pages/resources/Valentine’s%20Day%20Insights%202026/Chocolate%20and%20Candy.png
+
+Decor: /content/dam/walmart-connect-canada/fr/images/pages/resources/Valentine’s%20Day%20Insights%202026/Decor.png
+
+Jewlarry: /content/dam/walmart-connect-canada/fr/images/pages/resources/Valentine’s%20Day%20Insights%202026/Jewellery.png
+
+
+Document PDF:
+beauty: /content/dam/walmart-connect-canada/fr/documents/pages/resources/Valentine’s%20Day%20Insights%202026/WMC_ValentinesDay_Beauty_FY26_FR.pdf
+
+Chocolate and candy: /content/dam/walmart-connect-canada/fr/documents/pages/resources/Valentine’s%20Day%20Insights%202026/WMC_ValentinesDay_ChocolateAndCandy_FY26_FR.pdf
+
+Decor: /content/dam/walmart-connect-canada/fr/documents/pages/resources/Valentine’s%20Day%20Insights%202026/WMC_ValentinesDay_Decor_FY26_FR.pdf
+
+Jewlarry: /content/dam/walmart-connect-canada/fr/documents/pages/resources/Valentine’s%20Day%20Insights%202026/WMC_ValentinesDay_Jewellery_FY26_FR.pdf
