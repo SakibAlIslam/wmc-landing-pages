@@ -1,0 +1,323 @@
+<!-- Holiday Insights category selector (EN) -->
+<style>
+  .wmc-holiday-insight-on-pagers,
+  .wmc-holiday-insight-on-pagers *,
+  .wmc-holiday-insight-on-pagers *::before,
+  .wmc-holiday-insight-on-pagers *::after {
+    box-sizing: border-box;
+  }
+
+  .wmc-holiday-insight-on-pagers {
+    color: #041E42;
+    font-family: inherit;
+    width: 100%;
+  }
+
+  /* Category pills */
+  .wmc-holiday-insight-on-pagers__pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 0 0 32px;
+    padding: 0;
+  }
+
+  .wmc-holiday-insight-on-pagers__pill {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+    padding: 6px 18px;
+    border: 1px solid #041E42;
+    border-radius: 999px;
+    background: #041E42;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  .wmc-holiday-insight-on-pagers__pill:hover {
+    opacity: 0.88;
+  }
+
+  .wmc-holiday-insight-on-pagers__pill.is-active {
+    background: #FFFFFF;
+    color: #041E42;
+    opacity: 1;
+  }
+
+  .wmc-holiday-insight-on-pagers__pill:focus-visible {
+    outline: 2px solid #041E42;
+    outline-offset: 2px;
+  }
+
+  /* Content card */
+  .wmc-holiday-insight-on-pagers__card {
+    display: grid;
+    grid-template-columns: 4fr 5fr;
+    gap: 24px;
+    align-items: stretch;
+  }
+
+  .wmc-holiday-insight-on-pagers__media {
+    margin: 0;
+  }
+
+  .wmc-holiday-insight-on-pagers__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 444 / 292;
+    object-fit: cover;
+    border-radius: 24px;
+  }
+
+  .wmc-holiday-insight-on-pagers__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4px 0 8px;
+  }
+
+  .wmc-holiday-insight-on-pagers__title {
+    margin: 0 0 8px;
+    color: #041E42;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+  .wmc-holiday-insight-on-pagers__desc {
+    margin: 0;
+    color: #041E42;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px;
+  }
+
+  .wmc-holiday-insight-on-pagers__link {
+    align-self: flex-start;
+    margin-top: 24px;
+    color: #041E42;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+  }
+
+  .wmc-holiday-insight-on-pagers__link:focus-visible {
+    outline: 2px solid #041E42;
+    outline-offset: 2px;
+  }
+
+  /* Mobile: stack image above text and scale the headline down */
+  @media (max-width: 767px) {
+    .wmc-holiday-insight-on-pagers__pills {
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .wmc-holiday-insight-on-pagers__pill {
+      padding: 10px 18px;
+    }
+
+    .wmc-holiday-insight-on-pagers__card {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .wmc-holiday-insight-on-pagers__desc {
+      font-size: 22px;
+      line-height: 28px;
+    }
+
+    .wmc-holiday-insight-on-pagers__link {
+      margin-top: 16px;
+    }
+  }
+</style>
+
+<section class="wmc-holiday-insight-on-pagers" data-lang="en" aria-label="Holiday insights by category">
+  <div class="wmc-holiday-insight-on-pagers__pills" role="group" aria-label="Holiday insights categories"></div>
+
+  <div class="wmc-holiday-insight-on-pagers__card" aria-live="polite">
+    <figure class="wmc-holiday-insight-on-pagers__media">
+      <img class="wmc-holiday-insight-on-pagers__img" alt="" width="444" height="292">
+    </figure>
+    <div class="wmc-holiday-insight-on-pagers__body">
+      <div>
+        <p class="wmc-holiday-insight-on-pagers__title"></p>
+        <p class="wmc-holiday-insight-on-pagers__desc"></p>
+      </div>
+      <a class="wmc-holiday-insight-on-pagers__link" href="#" target="_blank" rel="noopener"></a>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function () {
+    "use strict";
+
+    var IMG_BASE = "/content/dam/walmart-connect-canada/en/images/pages/insights/Holiday-Insights-One-Pagers-2026/";
+    var PDF_BASE = "/content/dam/walmart-connect-canada/en/documents/pages/resources/Holiday-Insights-One-Pagers-2026/";
+    var DEFAULT_ID = "pharmacy";
+
+    // Order here is the order of the pills on the page
+    var items = [
+      {
+        id: "apparel",
+        pill: "Apparel",
+        title: "Apparel",
+        desc: "Unwrap our insights to learn about the search habits of Apparel shoppers during the holidays.",
+        cta: "Discover key insights",
+        img: "Apparel.png",
+        pdf: "WMC_Holiday-Insights-Apparel_OnePager_2026_EN.pdf"
+      },
+      {
+        id: "beauty",
+        pill: "Beauty",
+        title: "Beauty",
+        desc: "From self-care essentials to beauty-enhancing products, shoppers are searching for their perfect match.",
+        cta: "Explore the category insights",
+        img: "Beauty.png",
+        pdf: "WMC_Holiday-Insights-Beauty_OnePager_2026_EN.pdf"
+      },
+      {
+        id: "decor",
+        pill: "Décor",
+        title: "Décor",
+        desc: "Connect with shoppers as they look to create meaningful moments through thoughtful décor and gifting.",
+        cta: "Uncover trends and behaviours",
+        img: "D%C3%A9cor.png",
+        pdf: "WMC_Holiday-Insights-Decor_OnePager_2026_EN.pdf"
+      },
+      {
+        id: "electronics",
+        pill: "Electronics",
+        title: "Electronics",
+        desc: "Explore the search trends shaping Electronics as shoppers look for tech, gifting, and upgrades this holiday season.",
+        cta: "Uncover the trends",
+        img: "Electronics.png",
+        pdf: "WMC_Holiday-Insights-Electronics_OnePager_2026_EN.pdf"
+      },
+      {
+        id: "grocery",
+        pill: "Grocery",
+        title: "Grocery",
+        desc: "Search and discovery amplify as shoppers prepare to host family and friends over delicious meals.",
+        cta: "Dig into the insights",
+        img: "Grocery.png",
+        pdf: "WMC_Holiday-Insights-Grocery_OnePager_2026_EN.pdf"
+      },
+      {
+        id: "toys",
+        pill: "Toys",
+        title: "Toys",
+        desc: "From wish lists to must-have gifts, discover what shoppers are searching for in Toys this holiday season.",
+        cta: "Unwrap the insights",
+        img: "Toys.png",
+        pdf: "WMC_Holiday-Insights-Toys_OnePager_2026_EN.pdf"
+      },
+      {
+        id: "pets",
+        pill: "Pets",
+        title: "Pets",
+        desc: "From wish lists to must-have gifts, discover what shoppers are searching for in Toys this holiday season.",
+        cta: "Uncover the trends",
+        img: "Pets.png",
+        pdf: "WMC_Holiday-Insights-Pets_OnePager_2026_EN.pdf"
+      },
+      {
+        id: "pharmacy",
+        pill: "Health, wellness & pharmacy",
+        title: "Pharmacy",
+        desc: "Discover what Pharmacy shoppers are searching for throughout the holiday season.",
+        cta: "Explore the insights",
+        img: "Pharmacy.png",
+        pdf: "WMC_Holiday-Insights-Pharmacy_OnePager_2026_EN.pdf"
+      },
+      {
+        id: "household",
+        pill: "Household supplies",
+        title: "Household Supplies",
+        desc: "Uncover how shoppers are searching for the Household Supplies that will make the holidays shine.",
+        cta: "Explore key insights",
+        img: "Household%20Supplies.png",
+        pdf: "WMC_Holiday-Insights-HouseholdSupplies_OnePager_2026_EN.pdf"
+      }
+    ];
+
+    function init(root) {
+      var pillsEl = root.querySelector(".wmc-holiday-insight-on-pagers__pills");
+      var imgEl = root.querySelector(".wmc-holiday-insight-on-pagers__img");
+      var titleEl = root.querySelector(".wmc-holiday-insight-on-pagers__title");
+      var descEl = root.querySelector(".wmc-holiday-insight-on-pagers__desc");
+      var linkEl = root.querySelector(".wmc-holiday-insight-on-pagers__link");
+      var pills = {};
+
+      // Build the pills from the data above
+      items.forEach(function (item) {
+        var btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "wmc-holiday-insight-on-pagers__pill";
+        btn.textContent = item.pill;
+        btn.setAttribute("data-id", item.id);
+        btn.setAttribute("aria-pressed", "false");
+        pillsEl.appendChild(btn);
+        pills[item.id] = btn;
+      });
+
+      // Swap the image, text and PDF link for the chosen category
+      function select(id) {
+        var item = null;
+        items.forEach(function (i) {
+          if (i.id === id) { item = i; }
+        });
+        if (!item) { return; }
+
+        Object.keys(pills).forEach(function (key) {
+          var isOn = key === id;
+          pills[key].classList.toggle("is-active", isOn);
+          pills[key].setAttribute("aria-pressed", isOn ? "true" : "false");
+        });
+
+        imgEl.src = IMG_BASE + item.img;
+        titleEl.textContent = item.title;
+        descEl.textContent = item.desc;
+        linkEl.textContent = item.cta;
+        linkEl.href = PDF_BASE + item.pdf;
+      }
+
+      pillsEl.addEventListener("click", function (e) {
+        var btn = e.target.closest ? e.target.closest(".wmc-holiday-insight-on-pagers__pill") : null;
+        if (btn && pillsEl.contains(btn)) {
+          select(btn.getAttribute("data-id"));
+        }
+      });
+
+      select(DEFAULT_ID);
+
+      // Preload the other images so switching feels instant
+      items.forEach(function (item) {
+        var pre = new Image();
+        pre.src = IMG_BASE + item.img;
+      });
+    }
+
+    var roots = document.querySelectorAll('.wmc-holiday-insight-on-pagers[data-lang="en"]');
+    for (var i = 0; i < roots.length; i++) {
+      init(roots[i]);
+    }
+  })();
+</script>
