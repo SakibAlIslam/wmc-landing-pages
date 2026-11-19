@@ -173,32 +173,23 @@
 
     var IMG_BASE = "/content/dam/walmart-connect-canada/fr/images/pages/resources/Holiday-Insights-One-Pagers-2026/";
     var PDF_BASE = "/content/dam/walmart-connect-canada/fr/documents/pages/resources/Holiday-Insights-One-Pagers-2026/";
-    var DEFAULT_ID = "apparel";
+    var DEFAULT_ID = "pets";
 
     // Order here is the order of the pills on the page
     var items = [
       {
-        id: "apparel",
-        pill: "Vêtements",
-        title: "Vêtements",
-        desc: "Consultez nos données pour en savoir plus sur les habitudes de recherche des consommateurs de vêtements durant les Fêtes.",
-        cta: "Découvrir les données clés",
-        img: "Apparel.png",
-        pdf: "WMC_Holiday-Insights-Apparel_OnePager_2026_FR.pdf"
-      },
-      {
-        id: "beauty",
-        pill: "Produits de beauté",
-        title: "Produits de beauté",
-        desc: "Des essentiels de soins personnels aux produits de beauté, les clients sont à la recherche de ce qui leur convient parfaitement.",
-        cta: "Explorer les données de la catégorie",
-        img: "Beauty.png",
-        pdf: "WMC_Holiday-Insights-Beauty_OnePager_2026_FR.pdf"
+        id: "pets",
+        pill: "Animaux de compagnie",
+        title: "Animaux de compagnie",
+        desc: "Des listes de souhaits aux cadeaux incontournables, découvrez les jouets recherchés par les clients pour les Fêtes.",
+        cta: "Découvrir les tendances",
+        img: "Pets.png",
+        pdf: "WMC_Holiday-Insights-Pets_OnePager_2026_FR.pdf"
       },
       {
         id: "decor",
-        pill: "Articles de decoration",
-        title: "Articles de decoration",
+        pill: "Articles de décoration",
+        title: "Articles de décoration",
         desc: "Ciblez les clients pendant qu’ils cherchent à créer des moments significatifs au moyen de cadeaux et d’articles de décoration bien pensés.",
         cta: "Découvrir les tendances et les comportements",
         img: "D%C3%A9cor.png",
@@ -214,15 +205,6 @@
         pdf: "WMC_Holiday-Insights-Electronics_OnePager_2026_FR.pdf"
       },
       {
-        id: "grocery",
-        pill: "Produits d’épicerie",
-        title: "Produits d’épicerie",
-        desc: "Les activités de recherche et d’exploration s’intensifient alors que les acheteurs se préparent à recevoir leurs parents et amis autour de délicieux repas.",
-        cta: "Explorer les données",
-        img: "Grocery.png",
-        pdf: "WMC_Holiday-Insights-Grocery_OnePager_2026_FR.pdf"
-      },
-      {
         id: "toys",
         pill: "Jouets",
         title: "Jouets",
@@ -230,15 +212,6 @@
         cta: "Déballer les données",
         img: "Toys.png",
         pdf: "WMC_Holiday-Insights-Toys_OnePager_2026_FR.pdf"
-      },
-      {
-        id: "pets",
-        pill: "Animaux de compagnie",
-        title: "Animaux de compagnie",
-        desc: "Des listes de souhaits aux cadeaux incontournables, découvrez les jouets recherchés par les clients pour les Fêtes.",
-        cta: "Découvrir les tendances",
-        img: "Pets.png",
-        pdf: "WMC_Holiday-Insights-Pets_OnePager_2026_FR.pdf"
       },
       {
         id: "pharmacy",
@@ -250,6 +223,24 @@
         pdf: "WMC_Holiday-Insights-Pharmacy_OnePager_2026_FR.pdf"
       },
       {
+        id: "grocery",
+        pill: "Produits d’épicerie",
+        title: "Produits d’épicerie",
+        desc: "Les activités de recherche et d’exploration s’intensifient alors que les acheteurs se préparent à recevoir leurs parents et amis autour de délicieux repas.",
+        cta: "Explorer les données",
+        img: "Grocery.png",
+        pdf: "WMC_Holiday-Insights-Grocery_OnePager_2026_FR.pdf"
+      },
+      {
+        id: "beauty",
+        pill: "Produits de beauté",
+        title: "Produits de beauté",
+        desc: "Des essentiels de soins personnels aux produits de beauté, les clients sont à la recherche de ce qui leur convient parfaitement.",
+        cta: "Explorer les données de la catégorie",
+        img: "Beauty.png",
+        pdf: "WMC_Holiday-Insights-Beauty_OnePager_2026_FR.pdf"
+      },
+      {
         id: "household",
         pill: "Produits ménagers",
         title: "Produits ménagers",
@@ -257,7 +248,16 @@
         cta: "Explorer les données clés",
         img: "Household%20Supplies.png",
         pdf: "WMC_Holiday-Insights-HouseholdSupplies_OnePager_2026_FR.pdf"
-      }
+      },
+      {
+        id: "apparel",
+        pill: "Vêtements",
+        title: "Vêtements",
+        desc: "Consultez nos données pour en savoir plus sur les habitudes de recherche des consommateurs de vêtements durant les Fêtes.",
+        cta: "Découvrir les données clés",
+        img: "Apparel.png",
+        pdf: "WMC_Holiday-Insights-Apparel_OnePager_2026_FR.pdf"
+      },
     ];
 
     function init(root) {
